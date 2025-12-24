@@ -11,7 +11,7 @@ body {
   margin: 0;
   overflow: hidden; /* Empêche les barres de défilement */
 }
-@media (max-width: 600px) {
+@media (max-width: 400px) {
   body {
     transform: rotate(90deg);
   }
