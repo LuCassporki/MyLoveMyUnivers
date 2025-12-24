@@ -11,9 +11,13 @@ body {
   margin: 0;
   overflow: hidden; /* Empêche les barres de défilement */
 }
-@media (max-width: 400px) {
+
+/* Version Mobile (quand l'écran est petit) */
+@media (max-width: 600px) {
   body {
-    transform: rotate(90deg);
+    font-size: 0.8em; /* On réduit un peu le texte pour qu'il ne dépasse pas */
+    padding: 10px; /* On ajoute une petite marge de sécurité */
+    text-align: center;
   }
 }
 
