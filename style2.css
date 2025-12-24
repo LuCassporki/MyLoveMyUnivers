@@ -1,0 +1,39 @@
+.window-frame {
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1e1e1e; /* Fond sombre style code */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.title-bar {
+  background: #333;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.red {
+  background: #ff5f56;
+}
+.yellow {
+  background: #ffbd2e;
+}
+.green {
+  background: #27c93f;
+}
+
+.title {
+  color: #ccc;
+  font-size: 14px;
+  flex-grow: 1;
+  text-align: center;
+}
