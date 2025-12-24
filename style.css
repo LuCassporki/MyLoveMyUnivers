@@ -11,6 +11,11 @@ body {
   margin: 0;
   overflow: hidden; /* Empêche les barres de défilement */
 }
+@media (max-width: 600px) {
+  body {
+    transform: rotate(90deg);
+  }
+}
 
 .typing-container {
   white-space: nowrap; /* Empêche le texte de passer à la ligne */
