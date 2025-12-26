@@ -1,51 +1,192 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  width: 90vw;
+  width: 99vw;
   background-color: #282c34;
   font-family: "Courier New", Courier, monospace;
   color: #61dafb;
   font-size: 1.5em;
-  margin: 0;
+  margin: auto;
   overflow: hidden; /* Empêche les barres de défilement */
+  /* border: solid 2px red; */
 }
 
-/* Version Mobile (quand l'écran est petit) */
-@media (max-width: 400px) {
-  body {
-    font-size: 0.8em; /* On réduit un peu le texte pour qu'il ne dépasse pas */
-    padding: 10px; /* On ajoute une petite marge de sécurité */
-    text-align: center;
-  }
+.choix {
+  margin-top: 20px;
+  width: 90vw;
+  font-size: 1em;
+  color: #ffffff;
+  /* border: solid 2px white; */
+  height: 20vh;
+  text-align: center;
+}
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: solid 5px red; */
+}
+
+.position-top {
+  position: absolute;
+  top: 0;
+}
+#typed-text2 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  transition: all 1s ease;
+}
+.transparent {
+  color: transparent;
 }
 
 .typing-container {
   white-space: nowrap; /* Empêche le texte de passer à la ligne */
   overflow: hidden; /* Cache tout ce qui dépasse */
-  /* border-right: .15em solid orange;  */
+  /* border-right: 0.15em solid orange; */
   /* Bordure pour le curseur initial */
   padding-right: 0.5em; /* Espace entre le texte et le curseur */
+  /* border: solid 2px blue; */
+  text-align: center;
+}
+#typed-text {
+  font-size: 1em;
 }
 
-/* Style du curseur clignotant */
 .cursor {
-  display: inline-block; /* Pour qu'il puisse avoir une largeur/hauteur */
-  width: 0.15em; /* Largeur du curseur */
-  height: 1.2em; /* Hauteur du curseur (ajuster selon la taille du texte) */
-  background-color: orange; /* Couleur du curseur */
-  vertical-align: middle; /* Alignement avec le texte */
-  animation: blink-caret 0.9s step-end infinite; /* Animation de clignotement */
+  display: inline-block;
+  border-left: 2px solid orange; /* On utilise une bordure pour la barre */
+  height: 1.2em; /* S'adapte à la hauteur de la ligne */
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
 }
 
-/* Animation du curseur */
-@keyframes blink-caret {
+@keyframes blink {
   from,
   to {
-    background-color: transparent;
+    border-color: transparent;
   }
   50% {
-    background-color: orange;
+    border-color: #555;
   }
 }
+
+/* #region navigation bar  */
+.G {
+  top: 10%;
+  right: 0;
+}
+.D {
+  top: 10%;
+  left: 0;
+}
+.G,
+.D {
+  position: absolute;
+  width: 30px;
+  height: auto;
+  gap: 20px;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  background-color: #48055c7e;
+  transition: all 0.6s ease;
+}
+.G:hover,
+.D:hover {
+  width: 350px;
+}
+.G button,
+.D button {
+  width: 350px;
+  height: 50px;
+  overflow: hidden;
+  background-color: black;
+  color: #d415e6;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.G button:hover,
+.D button:hover {
+  background-color: #f0f0f0;
+}
+/* #endregion; */
+/* #region; Style du bouton pause */
+.live {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  width: 350px;
+  height: auto;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 10;
+}
+.stop {
+  width: 100px;
+  height: 100px;
+
+  background-color: black;
+  color: #d415e6;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  border-radius: 50px;
+  z-index: 10;
+}
+.ref {
+  text-decoration: none;
+  width: 100px;
+  height: 100px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.ref button {
+  width: 100%;
+  height: 100%;
+
+  background-color: black;
+  color: #d415e6;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  border-radius: 50px;
+  z-index: 10;
+}
+/* #endregion; */
+
+/* #region; Style du curseur */
+* {
+  cursor: url("media/coeur1.png"), auto;
+}
+
+/* Animation du clignotement */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+/* #endregion; */

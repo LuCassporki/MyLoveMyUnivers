@@ -1,0 +1,44 @@
+@media (orientation: portrait) {
+  body {
+    font-size: 0.5em;
+  }
+
+  .choix {
+    height: 10vh;
+  }
+  main {
+    height: 80vh;
+  }
+
+  .typing-container {
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden; /* Cache tout ce qui dépasse */
+    /* border-right: 0.15em solid orange; */
+    /* Bordure pour le curseur initial */
+    padding-right: 0.5em; /* Espace entre le texte et le curseur */
+  }
+
+  #typed-text {
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  #typed-text2 {
+    font-size: 1.6em;
+    text-align: center;
+  }
+
+  .G,
+  .D {
+    width: 30px;
+  }
+  .G:hover,
+  .D:hover {
+    width: 150px;
+  }
+  .G button,
+  .D button {
+    width: 150px;
+    height: 50px;
+  }
+}
